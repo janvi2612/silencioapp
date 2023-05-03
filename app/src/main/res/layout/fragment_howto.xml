@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        >
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="What is a Noise Coin?"
+            android:textSize="20sp"
+            android:textColor="@color/textblue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/dm_sans"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/howto_string1"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans"
+            app:layout_constraintTop_toBottomOf="@id/txt1"
+            app:layout_constraintStart_toStartOf="@id/txt1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/textblue"
+            />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Exchange"
+            android:textSize="20sp"
+            android:textColor="@color/textblue"
+            android:fontFamily="@font/dm_sans"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt2"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/howto_string2"
+            app:layout_constraintTop_toBottomOf="@id/txt3"
+            app:layout_constraintStart_toStartOf="@id/txt3"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/textblue"
+            />
+
+
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hold"
+            android:textSize="20sp"
+            android:textColor="@color/textblue"
+            android:fontFamily="@font/dm_sans"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt4"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/txt6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/howto_string3"
+            app:layout_constraintTop_toBottomOf="@id/txt5"
+            app:layout_constraintStart_toStartOf="@id/txt5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp"
+            android:textColor="@color/textblue"
+            />
+
+        <RadioButton
+            android:id="@+id/radiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="30dp"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt6"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <TextView
+            android:id="@+id/txt7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Do not show me again"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/radiobutton"
+            app:layout_constraintStart_toEndOf="@id/radiobutton"
+            app:layout_constraintTop_toTopOf="@+id/radiobutton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:minHeight="60dp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/txt7"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="57dp"
+           />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

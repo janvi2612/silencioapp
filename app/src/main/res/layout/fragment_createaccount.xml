@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.createaccount.CreateaccountFragment">
+
+    <data>
+        <variable
+            name="viewModels"
+            type="com.example.myapplication.fragment.createaccount.CreateaccountViewModel" />
+    </data>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_dialog"
+        android:paddingBottom="24dp">
+
+        <ImageView
+            android:id="@+id/btnclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imag1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="157dp"
+            android:layout_marginEnd="157dp"
+            />
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create your account"
+            app:layout_constraintTop_toBottomOf="@id/img1"
+            app:layout_constraintStart_toStartOf="@id/img1"
+            app:layout_constraintEnd_toEndOf="@id/img1"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/textblue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="42dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/create_account"
+            android:lineHeight="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/textblue"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text1" />
+
+        <TextView
+            android:id="@+id/txtfirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="21dp"
+            android:text="First name"
+            android:textColor="@color/grey"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text2"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/edttext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter first name"
+            android:text="@={viewModels.firstName}"
+            android:layout_marginStart="37dp"
+            android:textColor="@color/grey"
+            android:paddingLeft="25dp"
+            android:minHeight="60dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans"
+            android:background="@drawable/rounded_edttext"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtfirstname"/>
+
+
+        <TextView
+            android:id="@+id/txtlastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="21dp"
+            android:text="Last name"
+            android:textColor="@color/grey"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edttext"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/edttext2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter last name"
+            android:text="@={viewModels.lastName}"
+            android:layout_marginStart="37dp"
+            android:textColor="@color/grey"
+            android:paddingLeft="25dp"
+            android:minHeight="60dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans"
+            android:background="@drawable/rounded_edttext"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtlastname"/>
+
+        <TextView
+            android:id="@+id/txtnickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="21dp"
+            android:text="Nickname"
+            android:textColor="@color/grey"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edttext2"
+            tools:ignore="TextSizeCheck" />
+        <EditText
+            android:id="@+id/edttext3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter nickname"
+            android:text="@={viewModels.nickName}"
+            android:layout_marginStart="37dp"
+            android:textColor="@color/grey"
+            android:paddingLeft="25dp"
+            android:minHeight="60dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/dm_sans"
+            android:background="@drawable/rounded_edttext"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtnickname"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dm_sans"
+            android:minHeight="60dp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edttext3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edttext3"
+            app:layout_constraintTop_toBottomOf="@id/edttext3" />
+
+
+        <TextView
+            android:id="@+id/txtaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:fontFamily="@font/dm_sans"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/btnContinue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="29dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginEnd="109dp"
+            android:layout_marginBottom="50dp"
+            tools:ignore="NotSibling" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_internet">No Internet</string>
+    <string name="something_went_wrong">something went wrong</string>
+    <string name="register_phone_text">Please specify your phone number in order to use our service.</string>
+    <string name="enter_code">If you don’t have any friends using Silencio try pressing “Feeling lucky” to see if you get referred by one of our existing members :) </string>
+    <string name="continue_with_google">Go ahead and create your account now using your phone number or Apple ID.</string>
+    <string name="create_account">
+        You need to specify your full name and also choose a nickname in order to use our service.
+    </string>
+    <string name="choose_password">
+      Your password must have at least 8 characters and contain one special character or number.
+    </string>
+
+    <string name="howto_string1">NOISE Coins can be earned either through referrals, or by completing measurements. This is a Silencio native token, that has various use cases!
+    </string>
+    <string name="howto_string2">Use NOISE to purchase goods &amp; services, or donate to a good cause!
+    </string>
+    <string name="howto_string3">In the near future NOISE will have its initial coin offering, and wil be transferable to other crypto assets. This means you can get paid money in form of Fiat Currency.
+    </string>
+    <string name="howto_measure_string1">    1.Do not talk directly over the phone
+    2.Lift your phone in the air while recording
+    3.Longer measurements are always better
+    4.Have fun!
+    </string>
+
+    <string name="howto_measure_string2">We filter out anomalies to prevent un-relevant data from impacting out data sets
+    </string>
+
+    <string name="wallet_you">%1$,.2f you</string>
+
+    <string name="wallet_friend">%1$,.2f friend</string>
+
+    <string name="wallet_friend1">%1$,.3f </string>
+
+    <string name="change_password_text1">To change your password, please enter your old one and then your new one.</string>
+
+    <string name="wallet_friend_list_inactivation_formatter">Last active %1$s ago</string>
+
+    <string name="invite_string_formatter">Hi there! Join the world\'s biggest noise mapping network. Take the first step to fighting Noise Pollution while earning Noise Coins. Follow this link https://apps.apple.com/us/app/silencionework/id6444363412 to download the app and use my username \"%1$s\" as your invitation code when signing up.</string>
+    <string name="shop_text">Until we have our main net launch, you will be able to exchange Noise Coins for goods and services using our marketplace. This feature is currently under development, but will be available soon!
+    </string>
+
+</resources>

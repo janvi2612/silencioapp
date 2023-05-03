@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.registerphoneno.RegisterphnoFragment">
+
+    <data>
+        <variable
+            name="viewModels"
+            type="com.example.myapplication.fragment.registerphoneno.RegisterphnViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_dialog"
+        android:paddingBottom="24dp">
+
+
+
+        <ImageView
+            android:id="@+id/btnclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/imag1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="157dp"
+            android:layout_marginEnd="157dp"
+            />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone number"
+            app:layout_constraintTop_toBottomOf="@id/img1"
+            app:layout_constraintStart_toStartOf="@id/img1"
+            app:layout_constraintEnd_toEndOf="@id/img1"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/dm_sans"
+            android:textColor="@color/textblue"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:fontFamily="@font/dm_sans"
+            android:text="@string/register_phone_text"
+            android:textColor="@color/textblue"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="43dp"
+            android:layout_marginEnd="42dp"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/txtregioncode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="33dp"
+            android:text="Country/ Region Code"
+            android:textColor="@color/grey"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text2"
+            tools:ignore="TextSizeCheck" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/edtcountrycodepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:minHeight="64dp"
+            app:ccp_flagBorderColor="@color/purple"
+            android:fontFamily="@font/dm_sans"
+            android:background="@drawable/rounded_edttext"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="5dp"
+            app:ccpDialog_fastScroller_handleColor="@color/purple"
+            android:paddingHorizontal="30dp"
+            android:gravity="center_vertical"
+            app:ccp_showFullName="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtregioncode"/>
+
+        <TextView
+            android:id="@+id/txtphoneno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="25dp"
+            android:text="Phone number"
+            android:textColor="@color/grey"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtcountrycodepicker"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/edttxt2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter code"
+            android:text="@={viewModels.phoneNumber}"
+            android:layout_marginStart="37dp"
+            android:textColor="@color/textblue"
+            android:paddingLeft="25dp"
+            android:minHeight="60dp"
+            android:fontFamily="@font/dm_sans"
+            android:background="@drawable/rounded_edttext"
+            android:layout_marginEnd="37dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtphoneno"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btncontinue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="@font/dm_sans"
+            android:minHeight="60dp"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/edttxt2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edttxt2"
+            app:layout_constraintTop_toBottomOf="@id/edttxt2" />
+
+
+        <TextView
+            android:id="@+id/txtaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:fontFamily="@font/dm_sans"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/btncontinue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginEnd="109dp"
+            android:layout_marginBottom="50dp"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
